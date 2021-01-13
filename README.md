@@ -188,4 +188,29 @@ the README file consists of every notes that i made along the Course.
 
     # lecture 13 : Simple types : Integers, Strings, and Floats
 
-    
+    Computers are dumb so we have to tell them what type of data we are working with.
+
+    in most of the other programming languages we have explicit declaration, 
+    but python works with implicit declaration which means:
+    if number is without quotes and decimal it is intiger.
+    if number is without quotes and having decimal it is float.
+    if anything is under quotes then it is string
+
+    To check the DataType of a value or a vlue stored in variable we use type function
+    with value or a variable inside ().
+
+    x = 10
+    y = "20"
+    z = 10.1
+
+    sum1 = x + x
+    sum2 = y + y
+
+    print(sum1, sum2)
+    print(type(x), type(y), type(z))
+
+    Output:
+    20 2020
+    <class 'int'> <class 'str'> <class 'float'>
+
+    Note : In above example as we can see x is int, y is str and z is float.
