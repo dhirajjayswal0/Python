@@ -1,16 +1,20 @@
-# Python
-This reposatory is simply created for my python Programming practice
+# Python Notes
+This reposatory is simply created for my python Programming practice and 
+the README file consists of every notes that i made along the Course.
 
-# section 1
-Introduction
+# section 1 : Introduction
 
-    # Lecture 1
+
+    # Lecture 1 : What to expect from the course
     We are going to build 10 real word Python Programs
 
-    # Lecture 2
-    fixing error is as important as writing codes
+    
+    # Lecture 2 : What not to expect from the Course
+    fixing error is as important as writing codes so the
+    errors are not removed from the lectures.
 
-    # Lecture 3
+    
+    # Lecture 3 : Preview of the 10 Apps
     10 python applications that we will build are :
     1.  Command-line-based Interactive English Thesaurus
     2.  Web Maps on the Browser
@@ -23,14 +27,16 @@ Introduction
     9.  Web App with Database Backend and Email Sending
     10. Web App with Download and Upload Features
 
-    # Lecture 4
+    
+    # Lecture 4 : How to contact Instructor
     If you have Python questions you want to ask go to below link
     https://www.udemy.com/user/adiune/?src=sac&kw=ardit%20sulce
 
     If you have a question related to code go to Q&A section 
     make sure to Copy-Pate your code there along with the error messages
 
-    # Lecture 5
+    
+    # Lecture 5 : The tools you need
     tools we will be needing are:
     1. Python installed on device
     2. IDE to write python codes
@@ -38,11 +44,13 @@ Introduction
     Pyhon is cross-platform so it will work on all operating sytems
     either it be Mac, Linux or windows
 
-    # Lecture 6
+    
+    # Lecture 6 : Installing Python and the IDE
     To install Python go to python.org
     Hover over to download and download the python version it shows
 
-    # Lecture 7
+    
+    # Lecture 7 : Important Note
     Section 2 to 12 covers Python basics. If you you have basic Knowledge
     of Python, you can skip to section 13 and start building real world apps.
 
@@ -52,17 +60,19 @@ Introduction
     beginner, feel free to ignore the test and continue the lectures in the given
     order.
 
-    # Lecture 8
+    
+    # Practice Test 1 : Check your Current skills
     Practice test to check your Current Skiils.
     Got 63% on first attemt before going through course,
     still going through course for better knowledge
     Try taking the test once you complete first 12 sections of the course.
 
 
-# Section 2
-The Basics: Small Program
 
-    # Lecture 8
+# Section 2 : The Basics: Small Program
+    
+
+    # Lecture 8 : First Python code
     import datetime  --  Imports datetime module
     once module is imported we can use refer another object inside this module.
 
@@ -71,7 +81,8 @@ The Basics: Small Program
     here datetime module has datetime object and this object has method now()
     this code will give the current datetime.
 
-    # lecture 9
+    
+    # Lecture 9 : First Python program
     python interactive shell we used before is usefull for testing but
     it dosent lets you store your code for your future uses.
 
@@ -101,5 +112,80 @@ The Basics: Small Program
     import datetime
     print(datetime.datetime.now())
 
+    Output:
+    2021-01-13 14:46:50.327237
+
     Now save the file and give python3 filename in terminal
     it will provide you with the date and time output.
+
+    Now looking at the output it gives the result but to make it look better:
+    import datetime
+    print("The date and Time is :", datetime.datetime.now())
+
+    Output:
+    The date and Time is : 2021-01-13 15:31:00.540913
+
+    
+    # Lecture 10 : FAQs
+
+    If, during this section, you encounter an error when you try to execute Python,
+    know that it may be due to two common reasons whose solutions are given below.
+    If you have an issue that is not included below, feel free to raise a question in the Q&A.
+
+    Question 1. When I run python basics.py on Windows, I get the error:
+
+    'python' is not recognized as an internal or external command operable program or batch file
+
+    Solution 1: If you are using Visual Studio Code, try restarting Visual Studio Code 
+    and then try running python basics.py again. If it doesn't work, go to Solution 2 below.
+
+    Solution 2: Try uninstalling Python and then install it again,
+    but this time make sure that the option Add Python to Path is 
+    marked as checked during the installation process.
+
+
+    # Lecture 11 : Summary
+    
+    Here is a summary of what you learned in this section:
+
+    Python 3 and the Visual Studio Code IDE were used in this course, but you can use any IDE.
+
+    The Python interactive shell (shown with >>>) is a quick way to execute Python code to see how it works.
+
+    Python programs are written in .py files.
+
+    You can make a program that shows the current date and time using these lines of code:
+    import datetime
+    print("The date and time is ", datetime.datetime.now())
+
+
+
+# section 3 : The Basics : Data Types
+
+
+    # Lecture 12 : Variables
+
+    Variables are names that we can create to store values in Python.
+    it provides us with more freedom to manipute the date.
+
+    code :
+    import datetime
+    time = datetime.datetime.now()
+    print(time)
+
+    name = "Dhiraj"
+    text = "Roll no:"
+    roll = 63
+    print(name, text, roll)
+
+    Output :
+    2021-01-13 17:29:00.152403
+    Dhiraj Roll no : 63
+
+    Note : Here print is the function and with it we can use multiple arguments.
+           Arguments in the above code are time, name, text and roll.
+    
+
+    # lecture 13 : Simple types : Integers, Strings, and Floats
+
+    
