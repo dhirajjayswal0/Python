@@ -186,7 +186,35 @@ the README file consists of every notes that i made along the Course.
            Arguments in the above code are time, name, text and roll.
     
 
-    # lecture 13 : Simple types : Integers, Strings, and Floats
+    # Coding Excercise 1 :
+
+    Assignment:
+
+    Assign a value to x in the first line,
+    and print out the variable value in the second.
+
+    Solution:
+
+    x = 10
+    print(x)
+
+    
+    # Coding Excercise 2 :
+
+    Assignment:
+
+    Assign some values to variables x, y, and z and
+    then print the values using print function.
+
+    Solution:
+
+    x=10
+    y=20
+    z=30
+    print(x, y, z)
+
+
+    # Lecture 13 : Simple types : Integers, Strings, and Floats
 
     Computers are dumb so we have to tell them what type of data we are working with.
 
@@ -214,3 +242,190 @@ the README file consists of every notes that i made along the Course.
     <class 'int'> <class 'str'> <class 'float'>
 
     Note : In above example as we can see x is int, y is str and z is float.
+
+
+    # Coding Exercise 3 :
+
+    Assignment:
+
+    Create three variables mood, strength, and rank and assign string to mood,
+    a float to strength, and an integer to rank.
+
+    Solution:
+
+    mood = "Happy"
+    strength = 10.5
+    rank = 6
+
+
+    # Coding Exercise 4 :
+
+    Assignment:
+
+    Assign numbers to x, y and z. Calculate the sum of x, y and z in s.
+    And finally print out the value of s.
+
+    Solution:
+
+    x = 1
+    y = 2
+    z = 3
+    s = (x+y+z)
+    print(s)
+
+
+    # Lecture 14 : List Types
+
+    Besides simple data types we also have compound data types and
+    the list is most popular one.
+
+    In a list we can store multiple objects.
+
+    List are store inside [ ] where each element is seperated by a comma.
+
+
+    # Lecture 15 : Ranges
+
+    You can create a list of numbers automatically using a range. 
+    
+    For example:        list(range(1, 10))
+    That will output:   [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+    As you can see we just needed to specify the list boundaries inside range(). So, we specified 1and 10. Note that 10 is not included in the list. The generated list always runs up to one number before the upper number. In our example, it goes up to 9 since the upper number is 10.
+
+    You can also specify a step as a third argument:
+
+    For example: list(range(1, 10, 2))
+    That will output: [1, 3, 5, 7, 9]
+
+    So, the count happens every two items starting from 1 and ending at 9.
+
+
+    # Coding Excercise 5 :
+
+    Assignment:
+
+    Assign a list to variable temperatures.
+    The list should contain three items, a float, an integer, and a string.
+
+    Solution:
+
+    temperatures = [ 1, 2.3, "hello"]
+
+
+    # Coding Excercise 6 :
+
+    Assignment:
+
+    Assign a list to variable rainfall.
+    The list should contain four items, a float, an integer, a string and a list.
+
+    Solution:
+
+    rainfall = [1.1, 2, "hello", [1, 2, 3, 4]]
+
+
+    # Lecture 16 : Type Attributes using dir( ) and help( )
+
+    dir(type) is a function which will give you all the things you can do
+    with a specific type.
+
+    help(type.attribute) will give all the details of the attribute.
+
+    q to quit and go back to shell.
+
+
+    dir(int) will give us below methods:
+
+    as_integer_ratio : Returns pair of integers, whose ratio is equal to original int
+    bit_length : Number of bits necessary to represent self in binary
+    conjugate : Returns self, the complex conjugate of any int
+    denominator : the denominator of a rational number in lowest terms
+    from_bytes : Return the integer represented by the given array of bytes
+    imag : the imaginary part of a complex number
+    numerator : the numerator of a rational number in lowest terms
+    real : the real part of a complex number
+    to_bytes : Return an array of bytes representing an integer.
+
+
+    dir(float) will give us below methods:
+
+    as_integer_ratio : Returns pair of integers, whose ratio is equal to original int
+    conjugate : Returns self, the complex conjugate of any int
+    fromhex : Create a floating-point number from a hexadecimal string
+    hex : Return a hexadecimal representation of a floating-point number.
+    imag : the imaginary part of a complex number
+    is_integer : Return True if the float is an integer.
+    real : the real part of a complex number
+
+
+    dir(str) will give us below methods:
+
+    capitalize : Return a capitalized version of the string
+    casefold : Return a version of the string suitable for caseless comparisons
+    center : Return a centered string of length width
+    count : Return the number of non-overlapping occurrences of substring
+    encode : Encode the string using the codec registered for encoding
+    endswith : Return True if S ends with the specified suffix, False otherwise
+    expandtabs : Return a copy where all tab characters are expanded using spaces
+    find : Return the lowest index in S where substring sub is found
+    format : Return a formatted version of S, using substitutions from args and kwargs
+    format_map : Return a formatted version of S, using substitutions from mapping
+    index : Return the lowest index in S where substring sub is found
+    isalnum : Return True if the string is an alpha-numeric string, False otherwise
+    isalpha : Return True if the string is an alphabetic string, False otherwise
+    isascii : Return True if all characters in the string are ASCII, False otherwise
+    isdecimal : Return True if the string is a decimal string, False otherwise
+    isdigit : Return True if the string is a digit string, False otherwise
+    isidentifier : Return True if the string is a valid Python identifier else False
+    islower : Return True if the string is a lowercase string, False otherwise
+    isnumeric : Return True if the string is a numeric string, False otherwise
+    isprintable : Return True if the string is printable, False otherwise
+    isspace : Return True if the string is a whitespace string, False otherwise
+    istitle : Return True if the string is a title-cased string, False otherwise
+    isupper : Return True if the string is an uppercase string, False otherwise
+    join : Concatenate any number of strings
+    ljust : Return a left-justified string of length width
+    lower : Return a copy of the string converted to lowercase
+    lstrip : Return a copy of the string with leading whitespace removed
+    maketrans : Return a translation table usable for str.translate()
+    partition : Partition the string into three parts using the given separator
+    removeprefix : Return a str with the given prefix string removed if present
+    removesuffix : Return a str with the given suffix string removed if present
+    replace : Return a copy with all occurrences of substring old replaced by new
+    rfind : Return the highest index in S where substring sub is found
+    rindex : Return the highest index in S where substring sub is found
+    rjust : Return a right-justified string of length width
+    rpartition : Partition the string into three parts using the given separator
+    rsplit :  Return a list of the words in the string, using sep as the delimiter string
+    rstrip : Return a copy of the string with trailing whitespace removed
+    split : Return a list of the words in the string, using sep as the delimiter string
+    splitlines : Return a list of the lines in the string, breaking at line boundaries
+    startswith : Return True if S starts with the specified prefix, False otherwise
+    strip : Return a copy of the string with leading and trailing whitespace removed
+    swapcase : Convert uppercase characters to lowercase and vise-versa
+    title : Return a version of the string where each word is titlecased
+    translate : Replace each character in the string using the given translation table
+    upper : Return a copy of the string converted to uppercase
+    zfill : Pad a numeric string with zeros on left, to fill a field of given width.
+
+
+    dir(list) will give us below methods:
+
+    append : Append object to the end of the list.
+    clear: Remove all items from list.
+    copy: Return a shallow copy of the list.
+    count: Return number of occurrences of value.
+    extend: Extend list by appending elements from the iterable.
+    index: Return first index of value.
+    insert: Insert object before index.
+    pop: Remove and return item at index (default last).
+    remove: Remove first occurrence of value.
+    reverse: (self, /)  Reverse *IN PLACE*.
+    sort: Sort the list in ascending order and return None.
+
+    
+    dir(tuple) will give us below methods:
+
+    count : Return number of occurrences of value
+    index : Return first index of value
