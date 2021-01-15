@@ -429,3 +429,210 @@ the README file consists of every notes that i made along the Course.
 
     count : Return number of occurrences of value
     index : Return first index of value
+
+
+    dir(dict) will give us below methods:
+
+    clear : D.clear() -> None.  Remove all items from D.
+    copy : D.copy() -> a shallow copy of D
+    fromkeys : Create a new dictionary with keys from iterable and values set to value
+    get : Return the value for key if key is in the dictionary, else default
+    items : D.items() -> a set-like object providing a view on D's items
+    keys : D.keys() -> a set-like object providing a view on D's keys
+    pop : D.pop(k[,d]) -> v, remove specified key and return the corresponding value
+    popitem : Remove and return a (key, value) pair as a 2-tuple.
+    setdefault : Insert key with a value of default if key is not in the dictionary
+    update : D.update([E, ]**F) -> None.  Update D from dict/iterable E and F
+    values : D.values() -> an object providing a view on D's values
+
+
+    # Lecture 17 : Fun Fact
+
+    Python got his name not from the snake, but from Monty Python's Flying Circus,
+    a favorite comedy series of Guido van Rossum, the creator of Python.
+
+
+    # Lecture 18 : How to find out what code you need
+
+    Methods needs dot(.) nation to be used, but functions dosent needs it.
+    for example :
+
+    function : print("hello)
+    method : "hello".upper
+
+    # lecture 19 : Bonus Steps of Learning Python
+
+    Always remember learning Python is about three things :
+    Syntax
+    Data Structure
+    Algorithm
+
+
+    # Coding Exercise 7 :
+
+    Assignment:
+
+    write a script which prints the max value from a list
+
+    Solution:
+
+    student_grades = [9.1, 8.8, 7.5]
+    max_value = max(student_grades)
+    print(max_value)
+
+
+    # Coding Exercise 8 :
+
+    Assignment:
+
+    write a script to count number of occurence of 10.0 in the list
+
+    Solution:
+
+    student_grades = [9.1, 8.8, 10.0, 7.7, 6.8, 8.0, 10.0, 8.1, 10.0, 9.9]
+    print(student_grades.count(10.0))
+
+
+    # Coding Exercise 9 :
+
+    Assignment:
+
+    write a script to convert string to lowercase text.
+
+    Solution:
+
+    username = "Python3"
+    print(username.lower())
+
+
+    # Lecture 20 : Dictionary Types
+
+    when we have array of items with some identity the dictionary data types are used.
+    For dictionary data types {"Key":value, "key":value} are used.
+
+
+    # Lecture 21 : Fun Fact
+
+    Did you know that Python was first released in 1991?
+    Python 2 was released in 2000, and Python 3 (the current version) in 2008.
+
+
+    # Coding Exercise 10 :
+
+    Assignment:
+
+    Assign a dictionary to variable day_temperatures.
+    The dictionary should contain three keys, "morning", "noon", and "evening"
+    Each key should have a float as value.
+
+    Solution:
+
+    day_temperatures = {"morning":6.5, "evening":7.6, "noon":8.6}
+
+
+    # Lecture 22 : Tuple Types :
+
+    Tuple is just like a list but with ( ) .
+    Tuples are a bit faster as compared to list.
+    Tuples are immutable while list are mutable.
+    
+    i.e : We can add or delete values from a list but not from tuple.
+          as a reference append method will work with list but not with tuple.
+
+
+    # Coding Exercise 11 :
+
+    Assignment:
+
+    Create a color_codes variable and assign a tuple to it.
+    The tuple should contain three tuples as items.
+
+    Solution:
+
+    color_codes = ((1,2,3),(4,5,6),(7,8,9))
+
+
+    # Coding Exercise 12 :
+
+    Assignment:
+
+    Assign a dictionary to variable day_temperatures.
+    The dictionary should contain three keys: "morning","noon", and "evening"
+    and each key should contain three float values.
+
+    Solution:
+
+    day_temperatures = {"morning":(1.1,2.2,3.3),"noon":(4.4,5.5,6.6),
+                       "evening":(7.7,8.8,9.9)}
+    
+
+    # Lecture 23 : How to use datatypes in real world
+
+    All these datatypes are rarely created manually in the program file,
+    rather we usally import the data from a file and implement the datatype over it.
+
+
+    # Lecture 24 : Fun Facts
+    
+    Python is mainly used for automation purposes, web apps, and data science.
+    Many big companies, like Instagram, Facebook, and Amazon, use Python 
+    in different parts of their products. For example, Facebook uses Python 
+    to process images.
+
+
+    # Lecture 25 : Summary: Integers, Floats, Lists, Dictionaries, Tuples, dir, help
+
+    In this section, you learned that:
+
+    Integers are for representing whole numbers:
+    rank = 10
+    eggs = 12
+    people = 3
+
+    Floats represent continuous values:
+    temperature = 10.2
+    rainfall = 5.98
+    elevation = 1031.88
+
+    Strings represent any text:
+    message = "Welcome"
+    name = "John"
+    serial = "R001991981SW"
+
+    Lists represent arrays of values that may change during the course of the program:
+    members = ["Sim Soony", "Marry Roundknee", "Jack Corridor"]
+    pixel_values = [252, 251, 251, 253, 250, 248, 247]
+
+    Dictionaries represent pairs of keys and values:
+    phone_numbers = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
+    volcano_elevations = {"Glacier Peak": 3213.9, "Rainer": 4392.1}
+
+    Keys of a dictionary can be extracted with:
+    phone_numbers.keys()
+
+    Values of a dictionary can be extracted with:
+    phone_numbers.values()
+
+    Tuples represent arrays of values that are not to be changed during the course of the program:
+    vowels = ('a', 'e', 'i', 'o', 'u')
+    one_digits = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+    To find out what attributes a type has:
+    dir(str)
+    dir(list)
+    dir(dict)
+
+    To find out what Python builtin functions there are:
+    dir(__builtins__)
+
+    Documentation for a Python command can be found with:
+    help(str)
+    help(str.replace)
+    help(dict.values)
+
+
+
+# Section 4 : The Basics: Operations with Data Types
+
+
+    # Lecture 26 : Python Shell and Terminal Tip
