@@ -636,3 +636,370 @@ the README file consists of every notes that i made along the Course.
 
 
     # Lecture 26 : Python Shell and Terminal Tip
+
+    Terminal :
+
+    clear command clears the terminal.
+
+
+    Python shell :
+
+    ctr + l  will clear the python shell.
+    exit() command will exit the python shell and return to commnad line
+    python3 command will get you yo python shell from command line
+
+
+    # Lecture 27 : List Reminder
+
+    In the next lecture, you will learn more about lists. Here's a reminder of how a list looks like in case you forgot:
+
+    search_engines = ["google", "bing", "duck duck go"]
+
+    That's a list made of three values, which in this example happen to be all strings.
+
+
+    # lecture 28 : More operations with Lists
+
+    while using dir(type) function most of the outputs which begins and ends with __ are used by python itself and are rarely used by us.
+
+
+    Coding excercise 13 :
+
+    Assignment :
+
+    Append the value of current to the end of the list seconds Please use the
+    list.append() method to do that.
+
+    Solution : 
+
+    seconds = [1.2323442655, 1.4534345567, 1.023458894]
+    current = 1.10001399445
+    seconds.append(current)
+
+
+    Coding excercise 14 :
+
+    Assignment:
+
+    remove item 1.4534345567 from seconds
+
+    Solution :
+
+    seconds = [1.2323442655, 1.4534345567, 1.023458894, 1.10001399445]
+    seconds.remove(index(1))
+
+
+    Coding excercise 15 :
+
+    Assignment:
+
+    remove item 1.4534345567, 1.023458894, 1.10001399445 from seconds
+
+    Solution :
+
+    seconds = [1.2323442655, 1.4534345567, 1.023458894, 1.10001399445]
+    seconds.remove(1.4534345567)
+    seconds.remove(1.023458894)
+    seconds.remove(1.10001399445)
+
+
+    # lecture 29 : Accessing List Items
+
+    to acess an item from a list we use __getitem__ function.
+    but instead of using it we can also give [index of item] to get that item.
+
+    for example :
+
+    monday_temperatures = [9.1, 7.2, 8.5]
+    monday_temperatures.__getiteam__(1)
+    monday_temperatures[1]
+
+    Outputs :
+
+    for both methods we will get same output that is 7.2
+
+
+    # Coding excercise 16 :
+
+    Assignment :
+
+    Complete the script so that it prints out the 3rd iteam of the list serials.
+
+    Solution :
+
+    serials = ["RH80810A", "AA899819A", "XYSA9099400",
+              "OOP8988459", "EEO8904882", "KOC9889482"]
+    print(serials[2])
+
+
+    # Coding excercise 17 :
+
+    Assignment :
+
+    Complete the script so that it prints out the 1st, the 3rd and the 6th 
+    iteam of the list serials.
+
+    Solution :
+
+    serials = ["RH80810A", "AA899819A", "XYSA9099400", "OOP8988459",
+    "EEO8904882", "KOC9889482"]
+    print(serials[0], serials[2], serials[5])
+
+
+    # Coding excercise 18 :
+
+    Assignment :
+
+    Append the first item of weekend to workdays.
+
+    Solution :
+
+    workdays = ["Mon", "Tue", "Wed", "Thu", "Fri"]
+    weekend = ["Sat", "Sun"]
+    workdays.append(weekend[0])
+
+    # Lecture 30 : Acessing List Slices
+
+    We can also acess a slice of the given list.
+    we will acess the list slice by using [start indes:ending index + 1]
+
+    For example :
+
+    monday_temperatures = [9.1, 8.8, 7.5]
+    print(monday_temperatures[0:2])
+
+    will give us output of [9.1, 8.8]
+
+    Also to access elements from the beging or till end we can leave empty space,
+    instead of giving vlue.
+
+    For example :
+
+    monday_temperatures = [9.1, 8.8, 7.5]
+    print(monday_temperatures[:2])
+    print(monday_temperatures[1:])
+
+    Here in above exaple the first function will give us output 9.1, 8.8
+    and the second function will give us 8.8, 7.5
+
+
+    # Lecture 31 : Accessing Items and Slices with Negative Indexes
+
+    every index in Python has two indexes one positive that starts from begining
+    and one negative that begings from the end.
+
+    For example :
+
+    monday_temperatures = [9.1, 8.8, 7.5]
+    print(monday_temperatures[-3:-1])
+
+    will give us output of [9.1, 8.8]
+
+    Also to access elements from the beging or till end we can leave empty space,
+    instead of giving vlue.
+
+    For example :
+
+    monday_temperatures = [9.1, 8.8, 7.5]
+    print(monday_temperatures[:-1])
+    print(monday_temperatures[-2:])
+
+    Here in above exaple the first function will give us output 9.1, 8.8
+    and the second function will give us 8.8, 7.5
+
+
+    # Lecture 32 : Acessing Characters and Slices in Strings
+
+    Strings has index too and it works same as in the case of list.
+
+    For example :
+
+    mystring = "Hello"
+    Print(mystring[1])
+    Print(mystring[-1])
+    Print(mystring[:3])
+
+    will give us output e , o and hel
+
+    we can also use cahane of iteams to acess specific character inside a list.
+
+    For example :
+
+    mylist = ["hello", 1 ,2, 3]
+    Print(mylist[0])
+    print(mylist[0][1])
+
+    will give us output hello and e
+
+
+    # Quiz 1 :
+
+    Quiz complete all right answers.
+
+
+    # Coding excercise 19 :
+
+    Assignment :
+
+    Print out the slice ["b", "c", "d"] of the letters list
+
+    Solution :
+
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+    print(letters[1:4])
+
+
+    # Coding excercise 20 :
+
+    Assignment :
+
+    Print out the slice ["a", "b", "c"] of the letters list
+
+    Solution :
+
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+    print(letters[:3])
+
+
+    # Coding excercise 21 :
+
+    Assignment :
+
+    Print out the slice ["e", "f", "g"] of the letters list
+
+    Solution :
+
+    letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+    print(letters[-3:])
+
+
+    # Lecture 33 : Dictionary Reminder
+
+    In the next lecture, you will learn more about dictionaries,
+    so here's an example of a dictionary in case you forgot about them:
+
+    search_engines_users = {"google": 1000000000, "bing": 127000000,
+                           "duck duck go":12000000}
+
+    A dictionary is made of pairs of keys and values. For example,
+    the first pair is "google": 1000000000 where "google" is the key 
+    and 1000000000 is the value of that key.
+
+
+    # Lecture 34 : Acessing Items in Dictionaries
+
+    Dictionaries has a bit different indexing than that of a list or strings.
+    here we can get the values or iteams by using its key.
+
+    For Example :
+
+    student_grades = {"Marry":9.1, "Sim":8.8, "John":7.5}
+    print(student_grades[sim])
+
+    here in the above exaple i have given sim as the key and thus for the output,
+    we will get 8.8
+
+
+    # Lecture 35 : Converting Between Datatypes
+
+    Sometimes you might need to convert between different data types in Python
+    for one reason or another. That is very easy to do:
+
+
+    From tuple to list:
+
+    >>> data = (1, 2, 3)
+    >>> list(data)
+    [1, 2, 3]
+
+
+    From list to tuple:
+
+    >>> data = [1, 2, 3]
+    >>> tuple(data)
+    (1, 2, 3)
+
+
+    From list to dictionary:
+
+    >>> data = [["name", "John"], ["surname", "smith"]]
+    >>> dict(data)
+    {'name': 'John', 'surname': 'smith'}
+
+
+    Note that the original data type needs to have the data structured in a way
+    that can be understood by the new data type. For example, the following 
+    would not work:
+
+    >>> data = [1, 2, 3]
+    >>> dict(data)
+    
+    TypeError: cannot convert dictionary update sequence element #0 to a sequence
+    That's because a dictionary is made of key and value pairs, but the list was
+    not constructed that way, so the above would generate an error.
+
+
+    # Lecture 36 : Summary: Positive/Negative Indexes, Slicing
+
+    In this section, you learned that:
+
+    Lists, strings, and tuples have a positive index system:
+
+    ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+       0      1      2      3      4      5      6
+    
+
+    And a negative index system:
+
+    ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+      -7     -6     -5     -4     -3     -2     -1
+    
+
+    In a list, the 2nd, 3rd, and 4th items can be accessed with:
+
+    days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    days[1:4]
+    Output: ['Tue', 'Wed', 'Thu']
+
+
+    First three items of a list:
+
+    days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    days[:3]
+    Output:['Mon', 'Tue', 'Wed'] 
+
+
+    Last three items of a list:
+
+    days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    days[-3:]
+    Output: ['Fri', 'Sat', 'Sun']
+
+
+    Everything but the last:
+
+    days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    days[:-1] 
+    Output: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'] 
+
+
+    Everything but the last two:
+
+    days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    days[:-2] 
+    Output: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'] 
+
+
+    A single in a dictionary can be accessed using its key:
+
+    phone_numbers = {"John Smith":"+37682929928","Marry Simpsons":"+423998200919"}
+    phone_numbers["Marry Simpsons"]
+    Output: '+423998200919'
+
+
+
+# Section 5 : The Basics: Functions and Conditionals
+
+
+    # lecture 37 : Creating Your Own Functions
+    
