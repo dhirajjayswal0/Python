@@ -1380,4 +1380,155 @@ the README file consists of every notes that i made along the Course.
 
     # Lecture 47 : User Input
 
-    
+    input function is used in python to get input from user.
+    it is passed with a message hich will be shown to the user.
+
+    It is a good practice to store the user input inside a variable,
+    so that we can get some freedom of manipulating the input
+
+    Note : Always remember that user inputs by default are of string type.
+           To fix this issue we use type convertion to change it to required type.
+
+    For Example :
+
+    user_input = input("Enter some Input:")
+    print(type(user_input))
+
+
+    Output :
+
+    <class "str">
+
+
+    To fix this issue we can use type converters.
+
+    For Example :
+
+    user_input = float(input("Enter some Input:"))
+    print(type(user_input))
+
+
+    Output :
+
+    <class "float">
+
+
+    # Lecture 48 : String Formatting
+
+    String formatting is a method of manipulating text to get desired output.
+
+    For Example :
+
+    user_input = input("Enter your name:")
+    message = "Hello %s!" % user_input
+    print(message)
+
+
+    Here in above exaple if Dhiraj is given as input then the Output will be :
+
+    Hello Dhiraj!
+
+
+    With Python 3.6 a new method of using strings was introduced.
+
+    Note : Below method wont work if your project is running with
+    Python version less than 3.6
+
+    user_input = input("Enter your name:")
+    message = f"hello {user_input}!"
+    print(message)
+
+
+    # Lecture 49 : String Formatting with Multiple Variables
+
+    We can also get multiple string in Python and use it in the same output.
+
+    For Example :
+
+    name = input("Enter your name:")
+    surname = input("Enter your surname:")
+    when = "today"
+
+    message1 = "Hello %s %s" % (name, surname)
+    message2 = f"Hello {name} {surname} what's up {when}."
+    print(message1)
+    print(message2)
+
+
+    # Coding Excercises 28 :
+
+    Assignment :
+
+    Implement a function that gets a person's name as a parameter
+    and greets the person as Hi Person.
+
+
+    Solution :
+
+    def foo(name):
+        return "Hi %s" % user
+
+    user = input("Enter your name: ")
+    print(foo(user))
+
+
+    # Coding Excercise 29 :
+
+    Assignment :
+
+    Implement a function that gets a person's name as a parameter
+    and greets the person as Hi Person.
+    Remember that the first letter of the name should always be uppercase.
+
+
+    Solution :
+
+    def foo(name):
+        return "Hi %s" % name.capitalize()
+
+    user = input("Enter your name: ")
+    print(foo(user))
+
+
+    Here in above solution we have used name.capitalized() function
+    to make first letter of name in uppercase.
+
+
+    # Lecture 50 : Summary: Processing User Input
+
+    In this section, you learned that:
+
+    A Python program can get user input via the input() function:
+
+    The input function halts the execution of the program
+    and gets text input from the user:
+
+    name = input("Enter your name: ")
+    The input function converts any input to a string,
+    but you can convert it back to int or float:
+
+    experience_months = input("Enter your experience in months: ")
+    experience_years = int(experience_months) / 12
+
+    You can format strings with (works both on Python 2 and 3):
+
+    name = "Sim"
+    experience_years = 1.5
+    print("Hi %s, you have %s years of experience." % (name, experience_years))
+
+    Output: Hi Sim, you have 1.5 years of experience.
+
+    You can also format strings with:
+
+    name = "Sim"
+    experience_years = 1.5
+    print("Hi {}, you have {} years of experience".format(name, experience_years))
+
+    Output: Hi Sim, you have 1.5 years of experience.
+
+
+
+# Section 7 : The Basics: Loops
+
+
+    Lecture 51 : For Loops: How and Why
