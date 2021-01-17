@@ -1002,4 +1002,382 @@ the README file consists of every notes that i made along the Course.
 
 
     # lecture 37 : Creating Your Own Functions
+
+    In previous lectures we were trying to get the mean.
+    But as there were no mean function we ended up calculating the sum and
+    then divided it with length using len function.
+
+    But the fact that Python does not have mean function does not mean we cant use it.
+    we can create our own fuction which will give us the mean as the output.
+
+    To create function in Python we use def keyword and pick a name for the function.
+    The name has to follow the same naming rule as for the variables.
+
+    After the function name we use ( ) inside which
+    we can input some parameter/input of the function and finally end the line with :
+
+    Point to remember is that once the line gets completed.
+    The next line should be indented with four spaces.
+
+    for Example :
+
+    def mean(mylist):
+        the_mean = sum(mylist) / len(mylist)
+        return the_mean
+
+    print(mean([1, 4, 5]))
+
+
+    Output :
+
+    3.3333333333333335
+
+    Here in above example we can see that we have created a mean function
+    with the hep of def keyword. we have given the algorithm it has to process when called
+    and what to return as an output.
+
+    Now below it when the function is called upon with the list as an input the function,
+    process the given input and return the output value.
+
+    Now the beauty of creating a function is that we can use it
+    without writing the same code again and again, by just giving a 
+    input value with the function name.
+
+
+    # Coding Excercise 22 :
+
+    Assignment :
+
+    Complete the lengther function definition so that it returns
+    the number of items for every input lst.
+
+
+    Solution :
+
+    def lengther(lst):
+        the_length = len(lst)
+        return the_length
+    
+
+    # Coding Excercise 23 :
+
+    Assignment :
+
+    Define a function that calculates the area of a square.
+
+
+    Solution :
+
+    def foo(length):
+        area_square = length*length
+        return area_square
+    
+
+    # Coding Excercises 24 :
+
+    Assignment :
+
+    Define a function that converts fluid ounces to milliliters
+    knowing that 1 fluid ounce is equal to 29.57353 milliliters.
+
+
+    Solution :
+
+    def foo(fluid_ounces):
+        milliliters = fluid_ounces * 29.57353
+        return milliliters
+    
+
+    # Lecture 38 : Print or return
+
+    When we define a function in Python and dont provide a return statement,
+    it will give us none as the output.
+
+    none here simply means nothing. it has no value or a type.
+
+    Also make sure whenever you are creating a function it has a return statement,
+    else even if you try to get the output with print function
+    inside the function itself it will return the print output along with none.
+
+    Another down side of using print inside of function insted of return is that
+    you wont be able to perform any mnipulation later on it.
+
+
+    # Lecture 39 : Intro to Conditionals
+
+    When defining a function which takes an input
+    if we give some input other than it supports, it will throw an error
+    Unsupported operand type(s)
+
+    We can make function support more data types by using conditionals.
+
+
+    # Lecture 40 : If conditional Examples
+
+    if - else conditionals are one of the simplest conditionals in the Python.
+
+    here one condition is given with if function,
+    and if the condition gets satisfied it will run the block below it.
+
+    and if it is not satisfied the function will move on to the else function
+    and run the code bloack bnelow it.
+
+    for example :
+
+    def mean(value):
+        if type(value) == dict:
+            the_mean = sum(value.values()) / len(value)
+        else:
+            the_mean = sum(value) / len(value)
+        
+        return the_mean
+
+    monday_temperature = [8.8, 9.1, 9.9]
+    student_grades = {"sam":8.8, "john":9.1, "sid":9.9}
+    print(mean(monday_temperature))
+    print(mean(student_grades))
+
+
+    Here in above code we can see that the if else statements are used
+    to check the type of data that is given for the input values.
+
+    once it does so it directs the input to the algorithm it should run through.
+
+
+    # Lecture 41 : Using "and" and "or" in a Conditional
+
+    You learned to check for one single condition:
+
+    x = 1
+    
+    if x == 1:
+        print("Yes")
+    else:
+        print("No")
+    
+
+    You can also check if two conditions are met at the same time using an and operator:
+
+    x = 1
+    y = 1
+    
+    if x == 1 and y==1:
+        print("Yes")
+    else:
+        print("No")
+    
+    That will return Yes since x == 1 and y ==1 are both True.
+
+
+    You can also check if one of two conditions are met using an or operator:
+
+    x = 1
+    y = 1
+    
+    if x == 1 or y==2:
+        print("Yes")
+    else:
+        print("No")
+
+    That will return Yes since at least one of the conditions is True.
+    In this case x == 1 is True.
+
+    
+    # Lecture 42 : Conditional Explained Line by Line
+
+    Whenever we are running a if - else conditional operator
+    it will check for the conditions until and unless a condition is satisfied.
+    And once a condition is satisfied it will ignore rest of the code blocks.
+
+
+    # Quiz 2 :
+
+    Quiz complete all right answers.
+
+
+    # Lecture 43 : More on Conditionals
+
+    While using a conditional we can can also use
+    isinstance(value, dict) with if function.
+
+    for example :
+
+    def mean(value):
+        if isinstance(value, dict):
+            the_mean = sum(value.values()) / len(value)
+        else:
+            the_mean = sum(value) / len(value)
+        
+        return the_mean
+
+    monday_temperature = [8.8, 9.1, 9.9]
+    student_grades = {"sam":8.7, "john":9.0, "sid":9.8}
+    print(mean(monday_temperature))
+    print(mean(student_grades))
+
+    In above exaple we can see that isinstance is used to check the type of value.
+    and the if else conditionals will direct the value to the specific algorithm
+    based on its type.
+
+
+    # Coding Excercise 25 :
+
+    Assignment :
+
+    Define a function that takes string as parameter.
+    returns False if the string contains less than 8 characters
+    return True is the string contains 8 or more characters
+
+    
+    Solution :
+
+    def password(string):
+        if len(string) < 8:
+            return False
+        else:
+            return True
+    
+
+    # Coding Excercise 26 :
+
+    Assignment :
+
+    Define a function that takes a temperature as parameter.
+    return Warm if the temperature is greater than 7
+    return cold if the temperature is equal or less than 7
+
+    
+    Solution :
+    
+    def foo(temp):
+        if temp > 7:
+            return "Warm"
+        else:
+            return "Cold"
+    
+
+    # Lecture 44 : Elif Conditionals
+
+    When there are more than 2 conditions to be checked for a function
+    we use elif function to check for those cases.
+
+    x = 3
+    y = 1
+    if x > y:
+        print("x is greater than y")
+    elif x==y:
+        print("x is equal to y")
+    else:
+        print("x is less than y")
+    
+
+    # Lecture 45 : White Space
+
+    extra spaces will work but to make your code more redable
+    dont use more than one.
+
+    it is good practice to keep one space in begining and end of operators.
+
+    also it is a good practice to keep a line of gap between conditional
+    paragraph and logical paragraph.
+
+
+    # Coding Exercise 27 :
+
+    Assignment :
+
+    Define a function that takes a temperature as parameter.
+    it should return Hot if the temperature is greater than 25
+    return Warm if the temperature is between 15 and 25, including 15 and 25
+    return cold if the temperature is less than 15
+
+
+    Solution :
+
+    def foo(temperature):
+    if temperature > 25:
+        return "Hot"
+    elif temperature >= 15 and temperature <= 25:
+        return "Warm"
+    else:
+        return "Cold"
+    
+
+    # Lecture 46 : Summary: Functions and Conditionals
+
+    In this section, you learned to:
+
+    Define a function:
+
+    def cube_volume(a):
+        return a * a * a
+    
+
+    Write a conditional block:
+
+    message = "hello there"
+
+    if "hello" in message:
+        print("hi")
+    else:
+        print("I don't understand")
+    
+
+    Write a conditional block of multiple conditions:
+
+    message = "hello there"
+    
+    if "hello" in message:
+        print("hi")
+    elif "hi" in message:
+        print("hi")
+    elif "hey" in message:
+        print("hi")
+    else:
+        print("I don't understand")
+    
+
+    Use the and operator to check if both conditions are True at the same time:
+
+    x = 1
+    y = 1
+    
+    if x == 1 and y==1:
+        print("Yes")
+    else:
+        print("No")
+    
+    Output is Yes since both x and y are 1.
+
+
+    Use the or operator to check if at least one condition is True:
+
+    x = 1
+    y = 2
+    
+    if x == 1 or y==2:
+        print("Yes")
+    else:
+        print("No")
+    
+    Output is Yes since x is 1.
+
+
+    Check if a value is of a particular type with:
+
+    isinstance("abc", str)
+    isinstance([1, 2, 3], list)
+
+    or
+
+    type("abc") == str
+    type([1, 2, 3]) == lst
+
+
+
+# Section 6 : The Basics: Processing User Input
+
+
+    # Lecture 47 : User Input
+
     
