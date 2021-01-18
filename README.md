@@ -1531,4 +1531,358 @@ the README file consists of every notes that i made along the Course.
 # Section 7 : The Basics: Loops
 
 
-    Lecture 51 : For Loops: How and Why
+    # Lecture 51 : For Loops: How and Why
+
+    down below is the structure of using a for loop.
+
+    For    variable name   in   list or input elements that it has to itterate   :
+            Algorithm
+    
+
+    For example :
+
+    monday_temperatures = [9.1, 8.8, 7.6]
+
+    for temperature in monday_temperatures:
+        print(round(temperature))
+        print("Done")
+
+    for letter in "hello":
+        print(letter)
+    
+
+    Output :
+
+    9
+    Done
+    9
+    Done
+    8
+    Done
+    h
+    e
+    l
+    l
+    o
+
+
+    # Coding Excercise 30 :
+
+    Assignment :
+
+    Loop over the colors items and print out the item in every loop.
+
+
+    Solution :
+
+    colors = [11, 34, 98, 43, 45, 54, 54]
+
+    for color in colors:
+        print(color)
+    
+
+    # Coding Excercise 31 :
+
+    Assignment :
+
+    Loop over the colors items and print out the item in every loop
+    only if the item is greater than 50.
+
+
+    Solution :
+
+    colors = [11, 34, 98, 43, 45, 54, 54]
+    for color in colors:
+        if color > 50:
+            print(color)
+    
+
+    # Coding Excercise 32 :
+
+    Assignment :
+
+    Loop over the colors items and print out the item in every loop
+    only if the item is integer.
+
+
+    Solution :
+
+    colors = [11, 34.1, 98.2, 43, 45.1, 54, 54]
+
+    for color in colors:
+        if isinstance(color, int):
+            print(color)
+    
+
+    # Coding Excercise 33 :
+
+    Assignment :
+
+    Loop over the colors items and print out the item in every loop
+    only if the item is integer and it is greater than 50.
+
+
+    Solution :
+
+    colors = [11, 34.1, 98.2, 43, 45.1, 54, 54]
+    for color in colors:
+        if isinstance(color, int) and color >50:
+            print(color)
+    
+
+    # Lecture 52 : For Loop Over a Function
+
+    Note that using loops, you can call any function multiple times,
+    even your own functions. Let's suppose we defined this function:
+
+    def celsius_to_kelvin(cels):
+        return cels + 273.15
+    
+    That is a function that gets a number as input, adds 273.15 to it and
+    returns the result. A for loop allows us to execute that function
+    over a list of numbers:
+
+    monday_temperatures = [9.1, 8.8, -270.15]
+    
+    for temperature in monday_temperatures:
+        print(celsius_to_kelvin(temperature))
+    
+    The output of that would be:
+
+    282.25
+    281.95
+    3.0
+
+    So, in the first iteration celsius_to_kelvin(9.1) was executed, in the second celsius_to_kelvin(8.8) and in the third celsius_to_kelvin(-270.15).
+
+    That's just something to keep in mind.
+
+
+    # Lecture 53 : Fun Fact
+
+    Python comes pre-installed on Linux and Mac operating systems.
+    In May 2019, Windows 10 also launched an update that also has Python pre-installed.
+    That is an added endorsement for Python.
+
+
+    # Lecture 54 : Looping Through a Dictionary
+
+    Unlike lists while itterating through dictionary we have to specify what to itterate.
+    and for this we have three options :
+
+    items    -   This will return combination of key and value as tuple
+    keys     -   This will return keys of the dictionary
+    values   -   This will return values of the dictionary
+
+
+    For example :
+
+    student_grades = {"Marry": 9.1, "Sim" : 8.8, "John" : 7.5}
+
+    for student_grade in student_grades.items():
+        print(student_grade)
+
+    for student_grade in student_grades.keys():
+        print(student_grade)
+
+    for student_grade in student_grades.values():
+        print(student_grade)
+    
+
+    Output :
+
+    ('Marry', 9.1)
+    ('Sim', 8.8)
+    ('John', 7.5)
+    Marry
+    Sim
+    John
+    9.1
+    8.8
+    7.5
+
+
+    # Lecture 55 : Bonus Code: Dictionary Loop and String Formatting
+
+    You can combine a dictionary for loop with string formatting to create text containing information from the dictionary:
+
+    phone_numbers = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
+    
+    for pair in phone_numbers.items():
+        print("{} has as phone number {}".format(pair[0], pair[1]))
+
+
+    Another (better) way to do it::
+
+    phone_numbers = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
+    
+    for key, value in phone_numbers.items():
+        print("{} has as phone number {}".format(key, value))
+    
+
+    In both cases the output is:
+
+    John Smith has as phone number +37682929928
+    Marry Simpons has as phone number +423998200919
+
+
+    # Coding Excercise 34 :
+
+    Assignment :
+
+    Make the code print out the following output using a for loop.
+
+    John Smith: +37682929928
+    Marry Simpons: +423998200919
+
+
+    Solution :
+
+    phone_numbers = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
+    for key, value in phone_numbers.items():
+        print("{}: {}".format(key, value))
+    
+
+    # Coding Excercise 35 :
+
+    Assignment :
+
+    Loop over the phone_numbers values and in each loop print out the phone number,
+    but with "00" instead of "+". In other words your code should output :
+
+    0037682929928
+    00423998200919
+
+
+    Solution :
+
+    phone_numbers = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
+    for values in phone_numbers.values():
+        print(values.replace("+", "00"))
+    
+
+    # Lecture 56 : While Loops: How and Why
+
+    A while loop runs until the given condition is true
+    or a certain condition is not met.
+
+    Be careful while using a While loop if the given condition is always true,
+    it might run indefinately, consuming space and processosor
+    and eventually crashing your system.
+
+    For example :
+
+    while True:
+        print("1")
+
+
+    Output :
+
+    1
+    1
+    1
+    .
+    .
+    .    
+
+
+    # Lecture 57 : While Loop Example with User Input
+
+    username = ""
+
+    while username != "Dhiraj":
+        username = input("Enter username : ")
+    
+
+    Here in above example we can see that while loop stops when condition is false.
+
+
+    # Quiz 3 :
+
+    Quiz complete all right answers.
+
+
+    # Lecture 58 : While loops with Break and Continue
+
+    Using Break and continue with while loop
+    gives you better control over the flow of algorithm.
+
+    Also it is more redable.
+
+    For Example :
+
+    while True:
+        username = input("Enter username: ")
+        if username == "pypy":
+            break
+        else:
+            continue
+    
+
+    # Lecture 59 : Summary: Loops
+
+    In this section, you learned that:
+
+    For loops are useful for executing a command over a large number of items.
+
+    You can create a for loop like so:
+
+    for letter in 'abc':
+        print(letter.upper())
+    Output:
+
+    A
+    B
+    C
+
+    The name after for (e.g. letter) is just a variable name
+
+
+
+    You can loop over dictionary keys:
+
+    phone_numbers = {"John Smith":"+37682929928","Marry Simpons":"+423998200919"}
+    for value in phone_numbers.keys():
+        print(value)
+    
+
+    Output:
+
+    John Smith
+    Marry Simpsons
+
+
+    You can loop over dictionary values:
+
+    phone_numbers = {"John Smith":"+37682929928","Marry Simpons":"+423998200919"}
+    for value in phone_numbers.values():
+        print(value)
+    
+
+    Output:
+
+    +37682929928
+    +423998200919
+
+    You can loop over dictionary items:
+
+
+    phone_numbers = {"John Smith":"+37682929928","Marry Simpons":"+423998200919"}
+    for key, value in phone_numbers.items():
+        print(key, value)
+
+    
+    Output: 
+
+    ('John Smith', '+37682929928')
+
+    ('Marry Simpons', '+423998200919')
+
+
+    While loops will run as long as a condition is true:
+
+    while datetime.datetime.now() < datetime.datetime(2090, 8, 20, 19, 30, 20):
+        print("It's not yet 19:30:20 of 2090.8.20")
+    
+    The loop above will print out the string inside print() over and over again
+    until the 20th of August, 2090.

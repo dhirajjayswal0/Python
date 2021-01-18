@@ -1,5 +1,3 @@
-def foo(name):
-    return "Hi %s" % name.capitalize()
-
-user = input("Enter your name: ")
-print(foo(user))
+phone_numbers = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
+for key, value in phone_numbers.items():
+    print("{}: {}".format(key, value))
