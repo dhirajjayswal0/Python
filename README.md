@@ -1886,3 +1886,187 @@ the README file consists of every notes that i made along the Course.
     
     The loop above will print out the string inside print() over and over again
     until the 20th of August, 2090.
+
+
+
+# Section 8 : Putting the Pieces Together: Building a Program
+
+
+    # Lecture 60 to 64 : Problem Statement
+
+    Python is used for various purposes but either it be it automation or website
+    or data science, in almost all the cases we will be needing the things that
+    we have learned till section 7.
+    
+    Now before moving to the advanced lectures, lets make a program
+    based on these concepts to revise things.
+
+    Assignment :
+
+    write a program which asks users for input until user inputs \end as input.
+    Also the program should be able to capitalized first letter of each sentence.
+    Also at the end of each input it should add '.' or '?' based on the type of sentence.
+    At the end, output the result as all strings together in the required format.
+
+
+    Solution :
+
+    text_output = ''
+
+    while True:
+        text = input('Say something: ')
+        if text == '\end':
+            break
+        else:
+            if text.startswith('how' or 'when' or 'who' or 'where' or 'whom'):
+                text_output = text_output + text.capitalize() + '? '
+            else:
+                text_output = text_output + text.capitalize() + '. '
+
+    print(text_output)
+
+
+    #==================== How it was solved by programmer =========================
+
+
+    def sentence_maker(phrase):
+        interrogatives = ('how', 'what', 'why')
+        capitalized = phrase.capitalize()
+        if phrase.startswith(interrogatives):
+            return '{}?'.format(capitalized)
+        else:
+            return '{}.'.format(capitalized)
+        
+    results = []
+    while True:
+        user_input = input('Say something: ')
+        if user_input == '\end':
+            break
+        else:
+            results.append(sentence_maker(user_input))
+
+    print(' '.join(results))
+
+
+    In section 60 to 64 we saw the nature of problem and the way to solve it.
+    After the problem was given i have tried a different approch to solve it.
+    However i have added the method by which programmer has solved it too.
+
+
+
+# Section 9 : List Comprehensions
+
+
+    # Lecture 65 : Simple List Comprehension
+
+    In this lecture we will lern how to use list comprehensions to get a new list
+    without using a usual for loop syntax.
+
+    temps = [221, 234, 340, 230]
+    new_temps = [temp/10 for temp in temps]
+    print(new_temps)
+
+
+    # Lecture 66 : List Comprehension with if Conditional
+
+    temps  = [221, 234, 340, -9999, 230]
+    new_temps = [temp/10 for temp in temps if temps != -9999]
+    print(new_temps)
+
+    Using above example we can understand that we can even use
+    if conditionals within the list comprehension.
+
+
+    # Coding Excercise 36 :
+
+    Assignment :
+
+    Define a function that takes a list as parameter which has both strint and integers
+    and returns a list with just integers.
+
+    Solution:
+
+    def foo(lst):
+        return [i for i in lst if isinstance(i, int)]
+    
+
+    # Coding Excercise 37 :
+
+    Assignment :
+    
+    Define a function that takes a list as parameter which has numbers
+    and after processing returns only the numbers greater than 0.
+
+    Solution:
+
+    def foo(lst):
+        return [i for i in lst if i > 0]
+    
+
+    # Lecture 67 : List Comprehension with If-Else Conditional
+
+    The list comprehension is a bit different when using if else conditional,
+    then that compared to the if conditional.
+    As in case of if - else the for loop goes at the end.
+
+    temps2  = [221, 234, 340, -9999, 230]
+    new_temps2 = [temp/10 if temp != -9999 else 0 for temp in temps2]
+    print(new_temps2)
+
+
+    # Coding Excercise 38 :
+
+    Assignment :
+    
+    Define a function that takes a list as parameter which has both strint and integers
+    and after processing returns only the same list with 0 instead of strings.
+
+    Solution:
+
+    def foo(lst):
+        return [i if isinstance(i, int) else 0 for i in lst]
+    
+
+    # Coding Excercise 39 :
+
+    Assignment :
+    
+    Define a function that takes a list as parameter which has decimal numbers as strings
+    and after processing returns the sum of all the float values.
+
+    Solution:
+
+    def foo(lst):
+    return sum([float(i) for i in lst])
+
+
+    # Lecture 68 : Summary: List Comprehensions
+
+    In this section, you learned that:
+
+    A list comprehension is an expression that creates a list
+    by iterating over another container.
+
+    A basic list comprehension:
+
+    [i*2 for i in [1, 5, 10]]
+    Output: [2, 10, 20]
+
+    List comprehension with if condition:
+
+    [i*2 for i in [1, -2, 10] if i>0]
+    Output: [2, 20]
+
+    List comprehension with an if and else condition:
+
+    [i*2 if i>0 else 0 for i in [1, -2, 10]]
+    Output: [2, 0, 20]
+
+
+
+# Section 10 : More on Functions
+
+
+    # Lecture 69 : Functions with Multiple Arguments
+
+    
