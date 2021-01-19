@@ -2069,4 +2069,198 @@ the README file consists of every notes that i made along the Course.
 
     # Lecture 69 : Functions with Multiple Arguments
 
+    A function can also have more than one arguments.
+    All we need to do is differentiate it using comma and thats it.
+
+    For Example :
+
+    def area(a, b):
+        return a * b
     
+    print(area(2, 5))
+
+
+    # Lecture 70 : Fun Fact
+
+    Python was the sixth most popular programming language in 2010 on
+    StackOverflow. It continually went up in the ranks to be the most popular
+    among all in 2018.
+
+
+    # Coding Exercise 40 :
+
+    Assignment :
+
+    Implement a function that takes two strings as parameters,
+    cancatenate them, and returns the result.
+
+
+    Output :
+
+    def string(a, b):
+        return a+b
+    
+
+    # Lecture 71 : Default and Non-default Parameters and Keyword
+                   and Non-keyword Arguments
+    
+    When variables are used inside a function it is called parameter.
+    while if we use values or variable name in place of it
+    while calling the function it will be called arguments.
+    
+    Python has two types of arguments keyword arguments and non - keyword arguments
+
+    The non - keyword argumnets are also called postitional arguments beacuse with
+    these arguments position matters. while it is not the case with keyword arguments.
+
+    In Python we also have dfefault parameters.
+    It is called default parameters if the value is defined within the function itself.
+
+    Note : If default value is assigned in the parameter itself we dont need to pass it
+           again with the arguments. however if we choose to do so the default value will be overridden by the argument value.
+
+           Also remember that default parameter can't come before non-default parameter.
+           If done so it will throw error.
+    
+
+    Lecture 72 : Functions with an Arbitrary Number of Non-keyword Arguments
+
+    Up until now we have made a function that can take only one argument
+    and inside that argument we have passed list with various elements.
+
+    But we can also pass several arbitarary numbers in same function
+    by adding * before parameter variable itself.
+
+    For example :
+
+    def mean(*args):
+        return sum(args) / len(args)
+    
+    print(mean(1, 3, 4))
+
+
+    Output :
+
+    2.6666666666666665
+
+
+    # Coding Excercise 41 :
+
+    Assignment :
+
+    Define a function that takes an indefinite number of arguments and
+    returns their average.
+
+
+    Solution :
+
+    def foo(*arg):
+        return sum(arg) / len(arg)
+    
+
+    # Coding Excercise 42 :
+
+    Assignment :
+
+    Define a function that takes an indefinite number of string as parameters
+    and returns a list containing all the strings in uppercase and sorted alphabetically.
+
+
+    Solution :
+
+    def foo(*arg):
+        args = [x.upper() for x in arg]
+        return sorted(args)
+    
+
+    # Lecture 73 :  Functions with an Arbitrary Number of Keyword Arguments
+
+    To use function with an arbitary number of keyword arguments ** are used before
+    the parameter name. and although paramerter name can be anything it is more 
+    suitable to use **kwargs as they are used by most and is more redable.
+    
+    function with an arbitary number of keyword arguments are used
+    when arguments names are defined. And for these types of functions the
+    output will be a dictionary.
+
+
+    For Example :
+
+    def mean(**kwargs):
+        return kwargs
+    
+    Print(mean(a=1, b=2, c=3))
+
+
+    Output :
+
+    {'a': 1, 'b': 2, 'c': 3}
+
+
+    # Coding Excercise 43 :
+
+    Assignment :
+
+    Enter the correct parameter inside find_sum() so that the output of the code is 9.
+
+
+    Solution :
+
+    def find_sum(**kwargs):
+        return sum(kwargs.values())
+        
+    print(find_sum(a=9))
+
+
+    # Lecture 74 : Summary: More on Functions
+
+    In this section, you learned that:
+
+    Functions can have more than one parameter:
+
+    def volume(a, b, c):
+        return a * b * c
+    
+
+    Functions can have default parameters (e.g. coefficient):
+
+    def converter(feet, coefficient = 3.2808):
+        meters = feet / coefficient
+        return meters
+    
+    print(converter(10))
+
+    Output: 3.0480370641306997
+
+    Arguments can be passed as non-keyword (positional) arguments (e.g. a)
+    or keyword arguments (e.g. b=2 and c=10):
+
+    def volume(a, b, c):
+        return a * b * c
+    
+    print(volume(1, b=2, c=10))
+    An *args parameter allows the  function to be called with
+    an arbitrary number of non-keyword arguments:
+
+    def find_max(*args):
+        return max(args)
+    print(find_max(3, 99, 1001, 2, 8))
+
+    Output: 1001
+
+    An **kwargs parameter allows the function to be called with
+    an arbitrary number of keyword arguments:
+
+    def find_winner(**kwargs):
+        return max(kwargs, key = kwargs.get)
+    
+    print(find_winner(Andy = 17, Marry = 19, Sim = 45, Kae = 34))
+
+    Output: Sim
+
+
+
+# Section 11 : File Processing
+
+
+    # Lecture 75 : The Concept of Processing Files in Python
