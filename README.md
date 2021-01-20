@@ -2264,3 +2264,171 @@ the README file consists of every notes that i made along the Course.
 
 
     # Lecture 75 : The Concept of Processing Files in Python
+
+    We can process files and also perform several operations over it.
+    In following lectures we will se how we can process a file in python.
+
+
+    # Lecture 76 : Reading Text From a File
+
+    In python we can acess files using Open( ) method.
+    and to read it simply use file.read() method
+
+
+    For Example :
+
+    myfile = open('Resources/0_fruits.txt')
+    print(myfile.read())
+
+
+    In the above example if the file fruit.txt is in the same folder as program,
+    the output will provide the text inside the text file.
+
+
+    # Coding Excercise 44 :
+
+    Assignment :
+
+    read the file bear.txt and print out it's content
+
+
+    Solution :
+
+    file = open("bear.txt")
+    print(file.read())
+
+
+    # Lecture 77 : File Cursor
+
+    Remember whenever a read method is executed,
+    after the first execution the cursor goes to the end of the las line.
+
+    So if we try to read the file again then it wont be printing the file again.
+    Insted it will simply print a empty string line.
+
+    So to prevent that from happening what we can do is,
+    we can read the file once and save the data inside a variable and
+    then we can use print function over that variable as many times as we like.
+
+    for example : 
+
+    myfile = open('Resources/0_fruits.txt')
+    content = myfile.read()
+
+    print(content)
+
+
+    Here in above example you can see that read data from myfile
+    is stored in content variable.
+
+    and now we can print the content as man times as we like.
+
+
+    # lecture 78 : Closing a file
+
+    while processing a file it is a good idea to
+    close it once the processing is completed for that file.
+
+    to do so we use filename.close() method.
+
+
+    For Example :
+
+    myfile = open('Resources/0_fruits.txt')
+    content = myfile.read()
+    myfile.close()
+
+    print(content)
+
+
+    # Lecture 79 : Opening Files using with
+
+    A better way acess files is using 'with context manager'
+
+    for example :
+
+    with open('Resources/0_fruits.txt') as myfile:
+        context = myfile.read()
+    
+    print(context)
+
+
+    Here in above example try to understand the flow,
+
+    using the with context manager we opened the text file as myfile.
+
+    later we saved the myfile.read() value in context variable.
+
+    and finally exited the with context manager and
+    printed the data stored in content variable.
+
+    Note : Here the print function is not indented inside the with context manager.
+
+
+    # Lecture 80 : Different Filepaths
+
+    If the file we are using in our program is inside a folder
+    after the python file path. simply give folder name/filename.
+
+
+    For Example :
+
+    If file is inside folder Resources
+    we can give like 'Resources/0_fruits.txt' as file name.
+
+
+    # Lecture 81 : Writing Text to a File
+
+    To write something in a file we cn use below format in Python.
+
+
+    For Example :
+
+    with open('Resources/vegitables', 'w') as myfile:
+        myfile.write('Tomato\ncucumber\nonion\n')
+        myfile.write('garlic')
+
+
+    In above exaple you can see that after text file name we have used 'w'
+    it denotes that we are performing a write function on this file.
+
+    While inserting data in erite method \n are used for line breaks.
+
+    if we would have used r it would have simply read the file.
+
+    Be careful while using write function if a file with same name is already there
+    it will override the file and remove all previous data.
+
+
+    # Coding Excercise 45 :
+
+    Assignment :
+
+    Read the bear.txt file, and print out the first 90 characters of its content.
+
+
+    Solution :
+
+    with open('bear.txt') as myfile:
+        context = myfile.read()
+        myfile.close
+    
+    print(context[:90])
+
+
+    # Coding Excercise 46 :
+
+    Assignment :
+
+    Define a function that gets a string character and a filepath as parameter and returns the number of occurence of the character in the file.
+
+
+    Solution :
+
+    def foo(character, filepath='bear.txt'):
+        with open(filepath) as myfile:
+            string = myfile.read()
+            return string.count(character)
+    
+
+    
