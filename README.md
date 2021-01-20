@@ -2303,6 +2303,9 @@ the README file consists of every notes that i made along the Course.
     Remember whenever a read method is executed,
     after the first execution the cursor goes to the end of the las line.
 
+    To go to the starting of the file again.
+    We can use myfile.seek(0) method.
+
     So if we try to read the file again then it wont be printing the file again.
     Insted it will simply print a empty string line.
 
@@ -2430,5 +2433,127 @@ the README file consists of every notes that i made along the Course.
             string = myfile.read()
             return string.count(character)
     
+
+    # Coding Excercise 47 :
+
+    Assignment :
+
+    Use Python to create a file with name file.txt and write the text snail there.
+
+
+    Solution :
+
+    with open('file.txt', 'w') as myfile:
+        myfile.write('snail')
+    
+
+    # Coding Excercise 48 :
+
+    Assignment :
+
+    Create a first.txt file that contains the first 90 characters of bear.txt.
+
+    Note that you should read the content of bear.txt with Python,
+    extract its first 90 characters with Python,
+    and write those characters in first.txt with Python.
+
+
+    Solution :
+
+    with open('bear.txt') as myfile:
+        content = myfile.read()
+        character = content[:90]
+
+    with open('first.txt', 'w') as newfile:
+        newfile.write(character)
+    
+
+
+    # Lecture 82 : Appending Text to an Existing File
+
+    'r'       open for reading (default)
+    'w'       open for writing, truncating the file first
+    'x'       create a new file and open it for writing
+    'a'       open for writing, appending to the end of the file if it exists
+    'b'       binary mode
+    't'       text mode (default)
+    '+'       open a disk file for updating (reading and writing)
+    'U'       universal newline mode (deprecated)
+
+
+    For example :
+
+    with open('Resources/Vegitables', 'a+') as myfile:
+        myfile.write(\ncabbage)
+        myfile.seek(0)
+        content = myfile.read()
+    
+    print(content)
+
+
+    # Coding Excercise 49 :
+
+    Assignment :
+    
+    Append the text of bear1.txt to bear2.txt.
+
+
+    Solution :
+
+    with open('bear1.txt') as myfile:
+        text = myfile.read()
+
+    with open('bear2.txt', 'a+') as myfile1:
+        myfile1.write(text)
+    
+
+    # Coding Excercise 50 :
+
+    Assignment :
+
+    Append the given text in file with line breaks.
+
+
+    Solution :
+
+    with open('data.txt', 'a+') as file:
+    file.write('\n1.3, 1.5\n2.3, 2.7\n1.3, 1.5\n2.3, 2.7')
+
+
+    # Lecture 83 : Summary: File Processing
+
+    In this section, you learned that:
+
+    You can read an existing file with Python:
+
+    with open("file.txt") as file:
+        content = file.read()
+    
+
+    You can create a new file with Python and write some text on it:
+
+    with open("file.txt", "w") as file:
+        content = file.write("Sample text")
+    
+
+    You can append text to an existing file without overwriting it:
+
+    with open("file.txt", "a") as file:
+        content = file.write("More sample text")
+    
+
+    You can both append and read a file with:
+
+    with open("file.txt", "a+") as file:
+        content = file.write("Even more sample text")
+        file.seek(0)
+        content = file.read()
+
+
+
+# Section 12 : Imported Modules
+
+
+    # lecture 84 : Builtin Modules
 
     
