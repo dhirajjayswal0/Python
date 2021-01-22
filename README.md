@@ -2554,6 +2554,95 @@ the README file consists of every notes that i made along the Course.
 # Section 12 : Imported Modules
 
 
-    # lecture 84 : Builtin Modules
+    # Lecture 84 : Builtin Modules
 
+    We can import builtin modules in Python. they are written in C language.
+
+    import sys
+    sys.buitin_module_names
+    import time(module name)
+
+    Here in above codes we can see that, we have imported sys
+    after wich using it we checked for builtin module names
+    and finally we have imported time module.
+
+    Now these modules have their own methods.
+    so in above case we checked dir(time)
+    and one of the method we got was sleep method.
+
+    Now using time.sleep( 3 ) method
+    we can make the execution stop for given time interval for this it's 3 seconds.
+
+
+    For example :
+
+    import time
+
+    while True:
+        with open('Resources/Vegitables.txt') as file:
+            print(file.read())
+            time.sleep(10)
     
+
+    Here in above example the execution will halt for 10 seconds each time.
+    then repeat the task.
+
+
+    # Lecture 85 : Standard Python Modules
+
+    Standard Python modules are scripts which comes along Python installation.
+    Tese modules are written in Python language itself.
+
+    To check where thse modules are installed we can use below command
+
+    sys.prefix
+
+    this will give us a directory path we can go there and see all the modules.
+
+    /Library/Frameworks/Python.framework/Versions/3.9
+
+    give open and directory name in terminal
+    then go inside lib folder
+    then go inside python version
+
+    and there you will have acess for all the standard python modules.
+
+
+    Here in in section we will be using os.path.exists('Resources/Vegitables.txt')
+
+    import time
+    import os
+
+    while True:
+        if os.path.exists('Resources/Vegitables.txt'):
+            with open('Resources/Vegitables.txt') as myfile:
+                print(myfile.read())
+        else:
+            print('file does not exists.')
+        time.sleep(10)
+    
+
+    # Lecture 86 : Third-Party Modules
+
+    We can install third party modules using below command
+    
+    pip install pandas(module_name)
+
+    after install it will be under lib > panda > site-packages
+
+    the panda module is used to process numbers in better format.
+
+
+    # Lecture 86 : Third-Party Module Example
+
+    import time
+    import os
+    import pandas
+
+    while true:
+        if os.path.exists('Resources/temps_today.csv'):
+            data = pandas.read_csv('Resources/temps_today.csv')
+            print(data.mean()['st1'])
+        else:
+            print('file does not exist.')
+        time.sleep(10)
