@@ -2639,10 +2639,99 @@ the README file consists of every notes that i made along the Course.
     import os
     import pandas
 
-    while true:
+    while True:
         if os.path.exists('Resources/temps_today.csv'):
             data = pandas.read_csv('Resources/temps_today.csv')
-            print(data.mean()['st1'])
+            print(data.mean())
         else:
             print('file does not exist.')
         time.sleep(10)
+    
+
+    # Lecture 87 : Summary: Imported Modules
+
+    In this section, you learned that:
+
+    Builtin objects are all objects that are written inside
+    the Python interpreter in C language.
+
+    Builtin modules contain builtins objects.
+
+    Some builtin objects are not immediately available in the global namespace.
+    They are parts of a builtin module. To use those objects the module needs
+    to be imported first. E.g.:
+
+    import time
+    time.sleep(5)
+
+    A list of all builtin modules can be printed out with:
+
+    import sys
+    sys.builtin_module_names
+
+    Standard libraries is a jargon that includes both builtin modules
+    written in C and also modules written in Python.
+
+    Standard libraries written in Python reside in the Python installation directory
+    as .py files. You can find their directory path with sys.prefix.
+
+    Packages are a collection of .py modules.
+
+    Third-party libraries are packages or modules written by
+    third-party persons (not the Python core development team).
+
+    Third-party libraries can be installed from the terminal/command line:
+
+    Windows:
+
+    pip install pandas or use python -m pip install pandas if that doesn't work.
+
+    Mac and Linux:
+
+    pip3 install pandas or use python3 -m pip install pandas if that doesn't work.
+
+
+
+# Section 13 : Application 1 : English Thesaurus
+
+
+    # Lecture 89 : Note
+
+    Following Lectures were coded on Atom editor but the codes will remain same.
+
+
+    # Lecture 90 : Interactive English Dictionary - How The Output Will Look Like
+
+    We will be building a command line based dictionary app.
+    When given a word the application should return the meaning of that word.
+    if there is spelling error, with correct speeling it 
+    will ask if you were looking for it.
+
+
+    # Lecture 91 : Know your Dataset
+
+    for this Dictionary application we will be using data.jason file
+    json files are somewhat similar to dictionary
+    it includes of a key and a value seperated by comma and
+    keys are stored inside a big bracket 
+
+    For example :
+
+    "rain": ["To fall from clouds in drops of water", 
+            "Precipitation in the form of liquid water drops],
+    
+
+    # Lecture 92 : Loading JSON Data
+
+    to use json files we need to import json built-in module
+    then use json.load() method and store it inside a varibale
+
+    For example :
+
+    import json
+
+    data = json.load(open("Resources/data.json"))
+
+
+    # Lecture 93 : Returning the Definition of a Word
+    
