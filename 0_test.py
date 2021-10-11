@@ -1,3 +1,6 @@
-phone_numbers = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
-for key, value in phone_numbers.items():
-    print("{}: {}".format(key, value))
+mat[ROW][COL]  = {{0, 1, 2, 3, 4, 5},
+                 {1, 2, 3, 4, 5, 0},
+                 {2, 3, 4, 5, 0, 1},
+                 {3, 4, 5, 0, 1, 2}};
+Source = {0, 0};
+Destination = {3, 7};
